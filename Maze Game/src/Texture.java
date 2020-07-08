@@ -1,0 +1,38 @@
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+public class Texture
+{
+    public static Texture wood = new Texture("C:/Users/Maureen/Pictures/Liam/Games/wood.png", 64);
+    public static Texture brick = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Redbrick.png", 64);
+    public static Texture bluestone = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Bluestone.png", 64);
+    public static Texture stone = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Greystone.png", 64);
+    public static Texture maze_end = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Maze_End.png", 64);
+
+    public int[] pixels;
+    private String loc;
+    public final int SIZE;
+
+    public Texture(String location, int size)
+    {
+        loc = location;
+        SIZE = size;
+        pixels = new int[SIZE * SIZE];
+        load();
+    }
+    private void load()
+    {
+        try
+        {
+            BufferedImage image = ImageIO.read(new File(loc));
+            int w = image.getWidth();
+            int h = image.getHeight();
+            image.getRGB(0, 0, w, h, pixels, 0, w);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
