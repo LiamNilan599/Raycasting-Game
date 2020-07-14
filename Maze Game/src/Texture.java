@@ -5,11 +5,11 @@ import java.io.IOException;
 
 public class Texture
 {
-    public static Texture wood = new Texture("C:/Users/Maureen/Pictures/Liam/Games/wood.png", 64);
-    public static Texture brick = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Redbrick.png", 64);
-    public static Texture bluestone = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Bluestone.png", 64);
-    public static Texture stone = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Greystone.png", 64);
-    public static Texture maze_end = new Texture("C:/Users/Maureen/Pictures/Liam/Games/Maze_End.png", 64);
+    public static Texture wood = new Texture("res/wood.png", 64);
+    public static Texture brick = new Texture("res/Redbrick.png", 64);
+    public static Texture bluestone = new Texture("res/Bluestone.png", 64);
+    public static Texture stone = new Texture("res/Greystone.png", 64);
+    public static Texture maze_end = new Texture("res/Maze_End.png", 64);
 
     public int[] pixels;
     private String loc;
